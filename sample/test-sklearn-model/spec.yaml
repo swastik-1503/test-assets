@@ -1,0 +1,34 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+
+name: sklearn-test
+path: ./
+
+properties:
+  inference-min-sku-spec: 24|1|220|64
+  inference-recommended-sku:  Standard_DS3_v2
+  SharedComputeCapacityEnabled: true
+
+tags:
+  industry: health-and-life-sciences
+  author: Microsoft
+  Preview: ""
+  Featured: ""
+  SharedComputeCapacityEnabled: ""
+  training_datasets: "specialized industry, Finance dataset"
+  languages: "en"
+  task: image-feature-extraction
+  inputModalities: "image"
+  outputModalities: "text"
+  trainingDataDate: "October 2024"
+  textContextWindow: "128,000"
+  maxOutputTokens: "4096"
+  license: custom
+  disable-batch: true
+  azureOffers: ""
+  inference_supported_envs:
+    - hf
+  inference_compute_allow_list:
+    - Standard_DS3_v2
+  inference_environment_asset_id: azureml://registries/azureml-preview-test1/environments/custom-test-env/versions/1
+
+version: 1
