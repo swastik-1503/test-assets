@@ -1,0 +1,5 @@
+$schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
+name: custom-test-env
+build:
+  path: image_build_with_reqirements
+  dockerfile_path: Dockerfile
